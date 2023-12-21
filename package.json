@@ -1,11 +1,11 @@
 {
-  "name": "consuming-external-apis",
+  "name": "expat-tools",
   "type": "module",
   "version": "0.2.2",
-  "description": "Consuming External APIs",
-  "repository": "https://github.com/dev-academy-challenges/consuming-external-apis.git",
+  "description": "Use of APIs for conversions",
+  "repository": "https://github.com/mattspriggs/expat-tools",
   "main": "server/index.ts",
-  "author": "Dev Academy Aotearoa",
+  "author": "Matt Spriggs",
   "license": "ISC",
   "scripts": {
     "dev": "run-p dev:client dev:server",
@@ -17,7 +17,7 @@
     "build:server": "esbuild --packages=external --platform=node --format=esm --outfile=dist/server.js --bundle server/index.ts",
     "test": "vitest",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
-    "format": "prettier -w '**/*.{js,jsx,ts,tsx}'"
+    "format": "prettier -w '**/*.{js,jsx,ts,tsx,html,css}'"
   },
   "eslintConfig": {
     "extends": "@devacademy/eslint-config/react",
@@ -26,6 +26,7 @@
     ]
   },
   "dependencies": {
+    "dotenv": "^16.3.1",
     "express": "^4.17.2",
     "npm-run-all": "^4.1.5",
     "superagent": "7.1.1"
