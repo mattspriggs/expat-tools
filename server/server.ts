@@ -15,5 +15,6 @@ server.use(express.json())
 server.use(express.static(join(__dirname, './public')))
 
 server.use('/api/v1/welcome', welcome)
+server.use('/api/v1/rates', routes)
 
 export default server
