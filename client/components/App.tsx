@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-
+import { Exchange } from './Exchange.tsx'
 import { getWelcome } from '../apiClient.ts'
 
 function App() {
@@ -15,7 +15,14 @@ function App() {
       })
   })
 
-  return <h1>{welcomeStatement}</h1>
+  return (
+    <>
+      <h1>{welcomeStatement}</h1>
+      <div>
+        <Exchange />
+      </div>
+    </>
+  )
 }
 
 export default App
