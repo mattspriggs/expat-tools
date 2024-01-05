@@ -15,6 +15,8 @@ export default function Exchange() {
         <select name="to_currency" id="">
           <option>Select a Currency</option>
         </select>
+        <p>is</p>
+        <p className="to_amount">$0</p>
       </form>
     </>
   )
