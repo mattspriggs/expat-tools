@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
-import { Exchange } from './Exchange.tsx'
+
+import Exchange from './Exchange.tsx'
 import { getWelcome } from '../apiClient.ts'
 
 function App() {
