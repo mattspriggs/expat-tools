@@ -2,13 +2,13 @@ import { useEffect, useState } from 'react'
 import { convert } from '../src/convert.js'
 import { Exchange as ExchangeType } from '../../models/Exchange.ts'
 import { generateOptions } from '../utils/utils.js'
-import { currencies } from '../../models/currencies.js'
+import { currencies as currencyValues } from '../../models/currencies.js'
 import { Currency } from '../../models/Currency.ts'
 import { getRates } from '../apiClient.ts'
 
 export default function Exchange() {
   const fromSelect = document.querySelector('[name="from_currency]"]')
-  const optionsHTML = generateOptions(currencies)
+  const optionsHTML = generateOptions(currencyValues)
   const [exch, setExch] = useState<ExchangeType[] | null>(null)
 
   async function fetchRates() {
@@ -35,9 +35,9 @@ export default function Exchange() {
         <input type="number" name="from_amount" />
         <select name="from_currency" id="">
           <option>Select a Currency</option>
-          {exch?.map(
+          {currencies.map(
             (currency) =>
-              `<option value= "${currency.rates}">${currency.rates} - ${currency.rates}</option>`
+              `<option value= "${currency.key}">${currency.rates.value} - ${currency.rates}</option>`
           )}
         </select>
         <p>in</p>
