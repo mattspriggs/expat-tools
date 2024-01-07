@@ -35,9 +35,9 @@ export default function Exchange() {
         <input type="number" name="from_amount" />
         <select name="from_currency" id="">
           <option>Select a Currency</option>
-          {currencies.map(
+          {currencyValues.map(
             (currency) =>
-              `<option value= "${currency.key}">${currency.rates.value} - ${currency.rates}</option>`
+              `<option value= "${currency}">${currency.rates.value} - ${currency.rates}</option>`
           )}
         </select>
         <p>in</p>
