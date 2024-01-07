@@ -13,7 +13,11 @@ export default function Exchange() {
       <form>
         <input type="number" name="from_amount" />
         <select name="from_currency" id="">
-          {optionsHTML}
+          <option>Select a Currency</option>
+          {currencies.map(
+            (currency) =>
+              `<option value= "${currencyCode}">${currencyCode} - ${currencyName}</option>`
+          )}
         </select>
         <p>in</p>
         <select name="to_currency" id="">
