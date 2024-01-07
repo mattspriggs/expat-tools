@@ -15,6 +15,7 @@ export default function Exchange() {
     const exchData = await getRates()
     try {
       setExch(exchData)
+      console.log(exchData)
     } catch (error) {
       console.log(error)
     }
