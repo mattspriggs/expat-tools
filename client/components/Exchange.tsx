@@ -10,6 +10,7 @@ export default function Exchange() {
   const fromSelect = document.querySelector('[name="from_currency]"]')
   const optionsHTML = generateOptions(currencyValues)
   const [exch, setExch] = useState<ExchangeType[] | null>(null)
+  const currencyCode = Object.keys(currencyValues)
 
   async function fetchRates() {
     const exchData = await getRates()
@@ -37,7 +38,7 @@ export default function Exchange() {
           <option>Select a Currency</option>
           {currencyValues.map(
             (currency) =>
-              `<option value= "${currency}">${currency.rates.value} - ${currency.rates}</option>`
+              `<option value= "${currency}">${currency} - ${currency}</option>`
           )}
         </select>
         <p>in</p>
