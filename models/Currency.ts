@@ -1,3 +1,4 @@
 export interface Currency {
-  currency: { [key: string]: string }
+  code: string
+  name: string
 }
