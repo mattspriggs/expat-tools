@@ -1,5 +1,6 @@
-export async function seed(knex){
+export async function seed(knex) {
   await knex('excodes').insert([
-    {abbr: }
+    { abbr: 'USD', name: 'United States Dollar' },
+    { abbr: 'AUD', name: 'Australian Dollar' },
   ])
 }
